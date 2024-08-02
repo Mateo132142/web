@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Figuras Geométricas Movibles con Imagen 360 Grados y Música de Fondo</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://aframe.io/releases/1.2.0/aframe-extras.min.js"></script>
     <style>
       body {
         margin: 0;
@@ -24,8 +23,8 @@
       <a-sky src="imagen.jpg"></a-sky>
 
       <!-- Luces -->
-      <a-light type="ambient" color="#888888"></a-light> <!-- Luz ambiental suave -->
-      <a-light type="directional" position="2 4 3" color="#CCCCCC"></a-light> <!-- Luz direccional suave -->
+      <a-light type="ambient" color="#888888"></a-light>
+      <a-light type="directional" position="2 4 3" color="#CCCCCC"></a-light>
 
       <!-- Figuras geométricas estáticas y movibles -->
       <a-box position="0 2 -5" rotation="0 45 0" color="#90CAF9" grab></a-box>
@@ -46,7 +45,8 @@
       <a-icosahedron position="5 2 -8" radius="1" color="#FFAB40" grab></a-icosahedron>
 
       <!-- Música de fondo -->
-      <a-sound src="la_pantera_rosa.mp3" autoplay="true" loop="true" position="0 1.6 0"></a-sound>
+      <!-- Cambia 'background-music.mp3' a la URL de tu archivo de música -->
+      <a-sound src="la_pantera_rosa.mp3" autoplay="true" loop="true" volume="1.0" position="0 1.6 0"></a-sound>
     </a-scene>
   </body>
 </html>
