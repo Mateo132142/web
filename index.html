@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Figuras Geométricas Movibles con Imagen 360 Grados y Música de Fondo</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Cámara y controles -->
+      <a-camera position="0 1.6 0">
+        <!-- Componente para habilitar el cursor en el modo escritorio -->
+        <a-cursor></a-cursor>
+      </a-camera>
+
+      <!-- Entorno 360 grados con una imagen panorámica de fondo -->
+      <a-sky src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/snow.jpg"></a-sky>
+
+      <!-- Luces -->
+      <a-light type="ambient" color="#888888"></a-light>
+      <a-light type="directional" position="2 4 3" color="#CCCCCC"></a-light>
+
+      <!-- Figuras geométricas estáticas y movibles -->
+      <a-box position="0 2 -5" rotation="0 45 0" color="#90CAF9" grab></a-box>
+      <a-sphere position="4 2 -5" radius="1.25" color="#FFAB91" grab></a-sphere>
+      <a-cylinder position="-4 2 -5" radius="0.5" height="2" color="#FFF59D" grab></a-cylinder>
+      <a-cone position="0 2 5" radius-bottom="1" radius-top="0" height="2" color="#C5E1A5" grab></a-cone>
+
+      <!-- Más figuras geométricas estáticas y movibles -->
+      <a-box position="3 1 -7" rotation="0 30 0" color="#FF8A65" grab></a-box>
+      <a-sphere position="-3 1 -7" radius="0.75" color="#64B5F6" grab></a-sphere>
+      <a-cylinder position="0 1 -10" radius="0.5" height="3" color="#A5D6A7" grab></a-cylinder>
+      <a-cone position="5 1 -10" radius-bottom="1" radius-top="0" height="2.5" color="#FFE082" grab></a-cone>
+
+      <!-- Figuras adicionales -->
+      <a-torus position="0 3 -3" radius="1" radius-tubular="0.1" color="#D1C4E9" grab></a-torus>
+      <a-ring position="0 1 -8" radius="1.5" radius-inner="0.5" color="#F48FB1" grab></a-ring>
+      <a-dodecahedron position="-5 2 -8" radius="1" color="#B9FBC0" grab></a-dodecahedron>
+      <a-icosahedron position="5 2 -8" radius="1" color="#FFAB40" grab></a-icosahedron>
+
+      <!-- Música de fondo -->
+      <!-- Cambia 'background-music.mp3' a la URL de tu archivo de música -->
+      <a-sound src="la_pantera_rosa.mp3" autoplay="true" loop="true" volume="1.0" position="0 1.6 0"></a-sound>
+    </a-scene>
+  </body>
+</html>
